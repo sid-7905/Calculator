@@ -158,7 +158,8 @@ function func()
                 display.value = "I do nothing😎";
                 display.style.color = "brown";
                 setTimeout(function () {
-                    display.value = expression;
+                    display.value = "";
+                    expression="";
                     display.style.color = "black";
                 }, 1000)
             }
