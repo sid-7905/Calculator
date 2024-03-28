@@ -1,6 +1,7 @@
 
 function func() 
-{  let cursor=document.getElementById("cursor");
+{   if(screen.width>768){
+    let cursor=document.getElementById("cursor");
     let main = document.getElementById("main");
     var timeout;
     main.addEventListener("mousemove",function(e){
@@ -15,7 +16,7 @@ function func()
     main.addEventListener("mouseout",function(e){
         cursor.style.display="none";
     })
-    
+    }
 
 
     let expression = "";
@@ -144,8 +145,9 @@ function func()
             if (text == "AC") {
                 display.value = "";
             }
-            else if (text == "C") {
+            else if (text == "C"){
                 display.value = display.value.slice(0, -1);
+                expression=display.value;
             }
             else if (valid.includes(text)) {
 
